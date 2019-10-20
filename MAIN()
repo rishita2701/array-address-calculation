@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int m,n,i,j,p,q,w,add;
+cout<<"\nEnter the order of an array:";
+cin>>m>>n;
+int a[m][n];
+cout<<"Enter the elements of an array:\n";
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+cin>>a[i][j];
+}
+}
+cout<<"\nEnter the width of each element : ";
+cin>>w;
+cout<<"Elements entered in array:\n";
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+    cout<<a[i][j]<<"\t";
+}
+}
+
+cout<<"\nEnter the position of elements of which you want to find the address:\n";
+cin>>p>>q;
+cout<<"\n\nAddress in case of row major: "<<(a[0]+(w)*(n*(p-1)+(q-1)));
+cout<<"\n\nAddress in case of column major: "<<(a[0]+(w)*((p-1)+m*(q-1)));
+return 0;
+}
